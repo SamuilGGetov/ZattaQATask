@@ -5,7 +5,10 @@ import org.openqa.selenium.WebDriver;
 
 public class simpleCrawlTest {
     WebDriver driver;
-   @Test public void crawlerTesting () {
 
-   }
+    @Test
+    public void crawlerTesting() {
+
+
+    }
 }
