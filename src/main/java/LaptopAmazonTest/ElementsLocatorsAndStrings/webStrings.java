@@ -1,4 +1,4 @@
-package LaptopAmazonTask.ElementsLocatorsAndStrings;
+package LaptopAmazonTest.ElementsLocatorsAndStrings;
 
 import org.openqa.selenium.WebDriver;
 

@@ -1,8 +1,8 @@
-package LaptopAmazonTask.Tests;
+package LaptopAmazonTest.TestCases;
 
-import LaptopAmazonTask.ElementsLocatorsAndStrings.elementsLocators;
-import LaptopAmazonTask.Pages.LoadTheWebsite;
-import LaptopAmazonTask.Pages.searchAndAddLaptops;
+import LaptopAmazonTest.ElementsLocatorsAndStrings.elementsLocators;
+import LaptopAmazonTest.Pages.LoadTheWebsite;
+import LaptopAmazonTest.Pages.searchAndAddLaptops;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -11,10 +11,12 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class LaptopTests {
+import static LaptopAmazonTest.Pages.searchAndAddLaptops.addRequiredItemsIntoTheCart;
 
 
-    static Duration timeout = Duration.ofSeconds(10);
+public class LaptopAmazonWebsiteTests {
+
+
 
     WebDriver driver = new ChromeDriver();
 
@@ -32,6 +34,7 @@ public class LaptopTests {
 
         LoadTheWebsite.websiteLoad(driver);
     }
+
     @Test(priority = 2)
     public void searchForLaptops() {
         searchAndAddLaptops.clickOnSearchBox(driver);
@@ -40,7 +43,7 @@ public class LaptopTests {
 
     @Test(priority = 3)
     public void addNonDiscountedLaptops() {
-      searchAndAddLaptops.addRequiredItemsIntoTheCart(driver);
+        addRequiredItemsIntoTheCart(driver);
     }
 
     @AfterClass
