@@ -1,4 +1,4 @@
-package ElementsLocatorsAndStrings;
+package LaptopAmazonTest.ElementsLocatorsAndStrings;
 
 import org.openqa.selenium.By;
 
@@ -16,10 +16,12 @@ public class elementsLocators {
   //  public static By addToCartButton = By.xpath("//a[@title='Add to Shopping Cart']");
     public static By addToCartButton = By.cssSelector("input[title='Add to Shopping Cart']");
     public static By backToResultsLink = By.id("breadcrumb-back-link");
+    public static By cartItemsCount = By.id("nav-cart-count");
+    public static By cartButton = By.id("nav-cart-count-container");
+
     public static By previousPrice = By.xpath("//div[@class='a-section a-spacing-small aok-align-center']");
-   // public static By enterDetailedItemInfo = By.cssSelector(".a-section aok-relative s-image-fixed-height"); // unique image locator only for the displayed laptops.
-    public static By currentPrice = By.cssSelector(".a-price-whole"); // unique image locator only for the displayed laptops.
-    public static By mainSearchList = By.xpath("//span[@data-component-type=\"s-search-results\"]"); // unique image locator only for the displayed laptops.
+    public static By currentPrice = By.cssSelector(".a-price-whole");
+    public static By mainSearchList = By.xpath("//span[@data-component-type=\"s-search-results\"]");
 
 
 }

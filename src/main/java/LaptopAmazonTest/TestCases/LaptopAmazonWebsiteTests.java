@@ -1,22 +1,22 @@
-package Pages;
+package LaptopAmazonTest.TestCases;
 
-import ElementsLocatorsAndStrings.elementsLocators;
-import org.openqa.selenium.TimeoutException;
+import LaptopAmazonTest.ElementsLocatorsAndStrings.elementsLocators;
+import LaptopAmazonTest.Pages.LoadTheWebsite;
+import LaptopAmazonTest.Pages.searchAndAddLaptops;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.List;
 
-public class draftTest {
+import static LaptopAmazonTest.Pages.searchAndAddLaptops.addRequiredItemsIntoTheCart;
 
 
-    static Duration timeout = Duration.ofSeconds(10);
+public class LaptopAmazonWebsiteTests {
+
+
 
     WebDriver driver = new ChromeDriver();
 
@@ -34,6 +34,7 @@ public class draftTest {
 
         LoadTheWebsite.websiteLoad(driver);
     }
+
     @Test(priority = 2)
     public void searchForLaptops() {
         searchAndAddLaptops.clickOnSearchBox(driver);
@@ -42,13 +43,13 @@ public class draftTest {
 
     @Test(priority = 3)
     public void addNonDiscountedLaptops() {
-      searchAndAddLaptops.addRequiredItemsIntoTheCart(driver);
+        addRequiredItemsIntoTheCart(driver);
     }
-//
-//    @AfterClass
-//    public void quitDriver() {
-//        driver.quit();
-//    }
+
+    @AfterClass
+    public void quitDriver() {
+        driver.quit();
+    }
 }
 
 
