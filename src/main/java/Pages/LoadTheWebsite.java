@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class LoadTheWebsite {
-    static Duration timeout = Duration.ofSeconds(5);
+    static Duration timeout = Duration.ofSeconds(20);
 
 
     public static void websiteLoad(WebDriver driver) {
